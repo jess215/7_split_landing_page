@@ -3,6 +3,8 @@
 :root {
     --left-bg-color: rgba(147, 129, 255, 0.5);
     --right-bg-color: rgba(43, 43, 43, 0.7);
+    --left-btn-hover-color: rgba(43, 43, 43, 1);
+    --right-btn-hover-color: rgba(147, 129, 255, 1);
 }
 
 * {
@@ -24,6 +26,36 @@ h1 {
     top: 20%;
     transform: translateX(-50%);
     white-space: nowrap;
+    filter: drop-shadow(0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.8));
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border:#fff solid 0.2rem;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 13rem;
+    padding: 1rem;
+    filter: drop-shadow(0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.8));
+}
+
+.split.left .btn:hover {
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
 }
 
 .container {
